@@ -11,3 +11,6 @@ cp -r out/* /usr/share/nginx/html/
 
 systemctl enable nginx
 systemctl start nginx
+
+nginx -t
+systemctl restart nginx
