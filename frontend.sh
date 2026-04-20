@@ -1,4 +1,3 @@
-sudo -i
 dnf install -y nginx
 curl -fsSL https://rpm.nodesource.com/setup_20.x | bash -
 dnf install -y nodejs
@@ -9,11 +8,10 @@ npm install
 npm run build
 rm -rf /usr/share/nginx/html/*
 cp -r out/* /usr/share/nginx/html/
-
-systemctl enable nginx
-systemctl start nginx
-
 cp nginx.conf etc/nginx/nginx.conf
 
-nginx -t
+
 systemctl restart nginx
+systemctl start nginx
+
+
