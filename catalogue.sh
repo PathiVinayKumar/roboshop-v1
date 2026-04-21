@@ -15,7 +15,7 @@ cd /app
 go mod tidy
 CGO_ENABLED=0 go build -o /app/catalogue .
 chown -R appuser:appuser /app
-chmod o-rwx /app -R
+chmod -R o-rwx /app
 
 systemctl daemon-reload
 systemctl enable catalogue
