@@ -1,6 +1,5 @@
 dnf install -y mysql8.4-server
-systemctl enable mysqld
-systemctl start mysqld
+
 
 mysql -u root -e "
   CREATE USER 'root'@'%' IDENTIFIED BY 'RoboShop@1';
@@ -8,3 +7,6 @@ mysql -u root -e "
   ALTER USER 'root'@'localhost' IDENTIFIED BY 'RoboShop@1';
   FLUSH PRIVILEGES;
 "
+
+systemctl enable mysqld
+systemctl start mysqld
