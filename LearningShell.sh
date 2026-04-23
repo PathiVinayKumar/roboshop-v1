@@ -6,3 +6,4 @@ echo -e
 ls -lasrsth
 
 echo -e "\e[35m >>>>>>> Install ngix <<<<<<<<<<< \e[0m"
+dnf install nginx -y
